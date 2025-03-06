@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Own Page - Onematch Betting Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="back-btn" id="backBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <main>
+    <section class="logo-section">
+      <h1 class="logo">1NEMATCH</h1>
+      <h2 class="tagline">Create Your Own Odds</h2>
+    </section>
+
+    <section class="explanation">
+      <h2>Understanding Betting Exchange</h2>
+      <p>On a betting exchange, you're not just a bettor - you're a maker. Creating your own odds means you can set the price you want to bet at, whether you're backing (betting for) or laying (betting against) an outcome. This gives you unprecedented control and often better value than traditional bookmakers.</p>
+      <p class="commission-note">Note: A 10% commission is charged on net winnings.</p>
+    </section>
+
+    <section class="calculator">
+      <h2>Bet Calculator</h2>
+      <div class="calculator-container">
+        <div class="input-group">
+          <label for="betType">Bet Type</label>
+          <select id="betType">
+            <option value="back">Back Bet</option>
+            <option value="lay">Lay Bet</option>
+          </select>
+        </div>
+        
+        <div class="input-group">
+          <label for="odds">Odds</label>
+          <input type="number" id="odds" step="0.01" min="1.01" placeholder="Enter odds">
+        </div>
+
+        <div class="input-group">
+          <label for="stake">Stake (£)</label>
+          <input type="number" id="stake" step="0.01" min="0" placeholder="Enter stake">
+        </div>
+
+        <div class="result-group">
+          <div class="potential-return">
+            <span>Potential Return:</span>
+            <span id="returnAmount">£0.00</span>
+          </div>
+          <div class="commission">
+            <span>Commission (10%):</span>
+            <span id="commissionAmount">£0.00</span>
+          </div>
+          <div class="net-profit">
+            <span>Net Profit:</span>
+            <span id="netProfitAmount">£0.00</span>
+          </div>
+          <div class="liability hidden">
+            <span>Liability:</span>
+            <span id="liabilityAmount">£0.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <button id="proceedBtn" class="proceed-btn">Proceed to Create</button>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

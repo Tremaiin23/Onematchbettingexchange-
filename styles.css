@@ -1,0 +1,187 @@
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn:hover {
+  background: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+.back-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000000;
+  --accent-color: #0a0a0a;
+  --text-color: #ffffff;
+  --highlight-color: #1a1a1a;
+  --card-bg: #111111;
+  --success-color: #1a472a;
+  --danger-color: #5c1a1a;
+  --gradient: linear-gradient(45deg, #00d4ff, #ff3e00);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 2rem;
+  font-weight: 600;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+}
+
+.explanation, .calculator {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.commission-note {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+  font-style: italic;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--highlight-color);
+  padding-bottom: 0.5rem;
+}
+
+.calculator-container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, select {
+  padding: 0.8rem;
+  border: 1px solid var(--highlight-color);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.result-group {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.potential-return, .liability, .commission, .net-profit {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--highlight-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.proceed-btn {
+  background: var(--gradient);
+  color: var(--text-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.proceed-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+  
+  .explanation, .calculator {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
